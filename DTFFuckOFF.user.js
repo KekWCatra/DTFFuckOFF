@@ -8,13 +8,13 @@
 // @run-at      document-end
 // ==/UserScript==
 
-let loc = window.location;
-if (loc.toString().indexOf('.ru/u/') >= 0) {
-    return;
-}
-
 function someFuckingMagic()
 {
+    let loc = window.location;
+    if (loc.toString().indexOf('.ru/u/') >= 0) {
+        return;
+    }
+    
     let commPinned = document.querySelectorAll('.comments__pinned');
     if (commPinned) {
         commPinned.forEach(function(commP) {
