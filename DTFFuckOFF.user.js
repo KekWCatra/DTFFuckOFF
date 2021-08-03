@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        DTF FuckOFF
 // @match       https://dtf.ru/*
-// @version     0.2  (2021-08-02)
+// @version     0.2.1  (2021-08-02)
 // @license     MIT
 // @author      KekW - https://dtf.ru/u/182912-kekw
 // @description В пизду DTF.
@@ -13,13 +13,6 @@ function someFuckingMagic()
     let loc = window.location;
     if (loc.toString().indexOf('.ru/u/') >= 0) {
         return;
-    }
-
-    let commPinned = document.querySelectorAll('.comments__pinned');
-    if (commPinned) {
-        commPinned.forEach(function(commP) {
-            commP.remove();
-        });
     }
 
     if (document.getElementsByClassName('comments')[0]) {
